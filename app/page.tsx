@@ -15,14 +15,14 @@ const categories = [
 ];
 
 export default async function HomePage() {
-  const supabase = await createClient{};
+  const supabase = await createClient();
 
   const { data: schools, error } = await supabase
     .from("schools")
     .select("name")
     .order("name");
   if (error) {
-    console.error("Supabase connection test failed:', error);
+    console.error("Supabase connection test failed:", error);
                   }
   return (
     <AppShell>
