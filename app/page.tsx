@@ -3,7 +3,7 @@ import { Search, ShoppingBag, BriefcaseBusiness, BadgePercent, House, HeartHands
 import { AppShell } from "@/components/app-shell";
 import { SectionHeader } from "@/components/ui";
 import { deals, hustles, marketplaceItems, services } from "@/lib/demo-data";
-
+import { createClient } from "@/lib/supabase/server";
 const categories = [
   { label: "Marketplace", href: "/marketplace", icon: ShoppingBag },
   { label: "Services", href: "/services", icon: BriefcaseBusiness },
@@ -14,7 +14,16 @@ const categories = [
   { label: "Campus", href: "/campus", icon: CalendarDays },
 ];
 
-export default function HomePage() {
+export default async function HomePage() {
+  const supabase = await createClient{};
+
+  const { data: schools, error } = await supabase
+    .from("schools")
+    .select("name")
+    .order("name");
+  if (error) {
+    console.error("Supabase connection test failed:', error);
+                  }
   return (
     <AppShell>
       <section className="rounded-[2rem] bg-black p-6 text-white md:p-10">
@@ -104,6 +113,32 @@ export default function HomePage() {
           ))}
         </div>
       </section>
+      <section className="mt-8 mb-8 rounded-3xl bg-white p-5 shadow-sm">
+  <p className="text-xs font-black uppercase tracking-wide text-amber-600">
+    Live Supabase Test
+  </p>
+
+  <h2 className="mt-2 text-xl font-black">
+    Tuscaloosa schools connected
+  </h2>
+
+  <div className="mt-3 space-y-2">
+    {schools?.map((school) => (
+      <div
+        key={school.name}
+        className="rounded-xl bg-zinc-100 px-4 py-3 text-sm font-bold"
+      >
+        {school.name}
+      </div>
+    ))}
+  </div>
+
+  {!schools?.length && (
+    <p className="mt-3 text-sm text-zinc-500">
+      No school records returned yet.
+    </p>
+  )}
+</section>
     </AppShell>
   );
 }
