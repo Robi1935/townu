@@ -1,17 +1,31 @@
 export const marketplaceItems = [
-  { id: "1", title: "Mini fridge", price: "$65", meta: "Tuscaloosa • 2h", emoji: "🧊" },
-  { id: "2", title: "Sectional sofa", price: "$150", meta: "Near UA • 4h", emoji: "🛋️" },
+  { id: "1", title: "Mini fridge", price: "$65", meta: "Near UA • 2h", emoji: "🧊" },
+  { id: "2", title: "Sectional sofa", price: "$150", meta: "Tuscaloosa • 4h", emoji: "🛋️" },
   { id: "3", title: "Desk + chair", price: "$55", meta: "Stillman area • 5h", emoji: "🪑" },
   { id: "4", title: "50” Smart TV", price: "$175", meta: "Tuscaloosa • 1d", emoji: "📺" },
+  { id: "5", title: "Twin XL mattress topper", price: "$30", meta: "Near UA • 3h", emoji: "🛏️" },
+  { id: "6", title: "Microwave", price: "$40", meta: "Shelton State area • 6h", emoji: "🍲" },
+  { id: "7", title: "Rolling dorm cart", price: "$25", meta: "Tuscaloosa • 8h", emoji: "🛒" },
+  { id: "8", title: "Game day cooler", price: "$35", meta: "Near campus • 1d", emoji: "🧊" },
+  { id: "9", title: "Graphing calculator", price: "$45", meta: "Stillman area • 1d", emoji: "🧮" },
+  { id: "10", title: "Coffee maker", price: "$20", meta: "Tuscaloosa • 1d", emoji: "☕" },
+  { id: "11", title: "Floor lamp", price: "$18", meta: "Near UA • 2d", emoji: "💡" },
+  { id: "12", title: "Free moving boxes", price: "FREE", meta: "Tuscaloosa • Today", emoji: "📦" },
 ];
 
 export const services = [
-  { name: "Laundry", emoji: "🧺", detail: "Pickup & delivery" },
-  { name: "Cleaning", emoji: "✨", detail: "Dorms & apartments" },
-  { name: "Tutoring", emoji: "📚", detail: "Find local help" },
-  { name: "Move-in", emoji: "📦", detail: "Setup & assembly" },
-  { name: "Auto", emoji: "🚗", detail: "Repair & detailing" },
-  { name: "Storage", emoji: "🔐", detail: "Semester storage" },
+  { name: "Weekly Laundry", emoji: "🧺", detail: "Pickup, wash, fold & delivery • Demo listing" },
+  { name: "Dorm & Apartment Cleaning", emoji: "✨", detail: "One-time or recurring cleaning • Demo listing" },
+  { name: "Math & Science Tutoring", emoji: "📚", detail: "Student-friendly tutoring • From $25/hr" },
+  { name: "Move-in & Unboxing Help", emoji: "📦", detail: "Unboxing, furniture assembly & room setup" },
+  { name: "Mobile Auto Detailing", emoji: "🚗", detail: "We come to your dorm or apartment • From $55" },
+  { name: "Semester Storage", emoji: "🔐", detail: "Pickup, storage & return between semesters" },
+  { name: "Bama Mama Care", emoji: "❤️", detail: "A helping hand for students away from home • Demo" },
+  { name: "Airport & Campus Rides", emoji: "🚙", detail: "Scheduled local transportation • Demo listing" },
+  { name: "Grad & Campus Photography", emoji: "📸", detail: "Graduation, birthday & campus photo sessions" },
+  { name: "Hair & Beauty", emoji: "💇", detail: "Student stylists, barbers & beauty services" },
+  { name: "Furniture Assembly", emoji: "🛠️", detail: "Beds, desks, shelves and apartment furniture" },
+  { name: "Care Package Delivery", emoji: "🎁", detail: "Snacks, game-day gear & student essentials" },
 ];
 
 export const hustles = [
